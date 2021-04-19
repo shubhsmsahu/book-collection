@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import SearchArea from "./SearchArea";
 import BookList from "./BookList";
 
@@ -6,6 +6,22 @@ const Books = () => {
   const [books, setBooks] = useState([]);
   const [searchField, setSearchField] = useState("");
   const [sort, setSort] = useState("");
+
+  useEffect(() => {
+    const defaultCollection = () => {
+      fetch(`https://www.googleapis.com/books/v1/volumes?q=programinglanguage`)
+        .then((data) => {
+          return data.json();
+        })
+        .then((actualData) => {
+          // console.log(actualData.items);
+          const data = cleanData(actualData);
+          // console.log(data);
+          setBooks(data);
+        });
+    };
+    defaultCollection();
+  }, []);
 
   const handleBook = (event) => {
     event.preventDefault();
