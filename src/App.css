@@ -25,7 +25,7 @@ input {
   padding: 10px;
   border-radius: 0px;
 }
-button {
+#searchButton {
   padding: 10px;
   margin-left: 0px;
   background-color: #343a40;
@@ -33,7 +33,7 @@ button {
   border-radius: 0px;
 }
 
-button:hover {
+#searchButton:hover {
   background-color: rgb(103, 103, 143);
   border-radius: 0px;
 }
@@ -42,4 +42,10 @@ select {
   padding: 10px;
   background-color: #343a40;
   color: #fff;
+  text-align: center;
 }
+/* @media screen and (max-width: 400px) {
+  select {
+     margin-top: ; 
+  } 
+} */

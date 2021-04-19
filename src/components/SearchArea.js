@@ -5,7 +5,9 @@ const SearchArea = ({ handleBook, handleSearch, handleSort }) => {
     <div className="search-area">
       <form action="" onSubmit={handleBook}>
         <input type="text" onChange={handleSearch} />
-        <button type="submit">Search</button>
+        <button id="searchButton" type="submit">
+          Search
+        </button>
         <select
           defaultValue="Sort"
           onChange={handleSort}

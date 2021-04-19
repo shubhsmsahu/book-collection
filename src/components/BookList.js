@@ -4,7 +4,7 @@ import "bootstrap/dist/css/bootstrap.css";
 
 const BookList = ({ books }) => {
   return (
-    <div className="card-deck d-flex justify-content-center ">
+    <div className="card-deck justify-content-center ">
       {books.map((book, index) => {
         return (
           <BookCard
@@ -13,6 +13,7 @@ const BookList = ({ books }) => {
             title={book.volumeInfo.title}
             author={book.volumeInfo.authors[0]}
             published={book.volumeInfo.publishedDate}
+            description={book.volumeInfo.description}
           />
         );
       })}

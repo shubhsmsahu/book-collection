@@ -16,7 +16,7 @@ const Books = () => {
       .then((actualData) => {
         // console.log(actualData.items);
         const data = cleanData(actualData);
-        console.log(data);
+        // console.log(data);
         setBooks(data);
       });
     // console.log(books);
@@ -28,7 +28,7 @@ const Books = () => {
   };
 
   const handleSort = (event) => {
-    console.log(event.target.value);
+    // console.log(event.target.value);
     setSort(event.target.value);
   };
 
