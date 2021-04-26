@@ -74,6 +74,7 @@ const Books = () => {
         parseInt(b.volumeInfo.publishedDate.substring(0, 4))
       );
     }
+    return 0;
   });
 
   return (
