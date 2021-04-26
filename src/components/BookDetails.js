@@ -22,7 +22,7 @@ const BookDetails = ({
           },
         }}
       >
-        <img src={image} />
+        <img src={image} alt="BookImage" />
         <h5>{title}</h5>
         <h3>{author}</h3>
         <p>{description}</p>
